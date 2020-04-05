@@ -1,0 +1,146 @@
+{
+  "main": {
+    "name":"Joshua King",
+    "occupation":"Software Engineer",
+    "description":"Professional developer with a passion for software quality",
+    "image":"profilepic.jpg",
+    "bio":"TODO",
+    "contactmessage":"Feel free to reach out.",
+    "email": "jarf1337@gmail.com",
+    "phone": "304-634-6997",
+    "address":{
+      "street":"12745 Pavestone Ct",
+      "city":"Fishers",
+      "state":"IN",
+      "zip": "46037"
+    },
+    "website": "http://www.jarf.me",
+    "resumedownload":"http://www.jarf.me/resume.pdf",
+    "social":[
+      {
+        "name":"facebook",
+        "url":"http://facebook.com/jarf1337",
+        "className":"fa fa-facebook"
+      },
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/jsking216/",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"github",
+        "url":"http://github.com/jsking216",
+        "className":"fa fa-github"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"T-shaped engineer with a focus on software quality.",
+    "education":[
+      {
+        "school":"University of Kentucky",
+        "degree":"Ph.D. Candidate of Computer Science",
+        "graduated":"Did not graduate",
+        "description":"Applied ML to Computer Vision applications on long-term video sequences.  Also taugh Intro to Programming in C++ for one semester."
+      },
+      {
+        "school":"Marshall University",
+        "degree":"B.S. of Computer Science",
+        "graduated":"May 2011",
+        "description":"Participated in ICPC for 2 years.  Senior capstone involved a large amount of systems engineering to create a cyber security sandbox."
+      }
+    ],
+    "work":[
+      {
+        "company":"OneCause",
+        "title":"Senior Software Engineer",
+        "years":"October 2019 - Present",
+        "description":"Brought on as a member of the Platform Team to aid in CI/CD test automation, help with library updates and dev tooling improvements.  Also served as a temporary member to other engineering teams in Product-oriented roles to help during crunch, which involved creating back-end services with Golang and front-end components with Angular."
+      },
+      {
+        "company":"AngiesList",
+        "title":"SDET",
+        "years":"May 2018 - October 2019",
+        "description":"Focused on BDD test automation with Gherkin on the Core Platform Team.  Maintained a handful of high throughput microservices, handling authentication and location services for the site.  Acted as a skunkworks for new engineering processes or tools to enhance developer productivity."
+      },
+      {
+        "company":"Pro Unlimited (Roche On-site Contractor)",
+        "title":"Verification Engineer",
+        "years":"February 2015 - March 2018",
+        "description":""
+      },
+      {
+        "company":"The Stevenson Company",
+        "title":"Lead Research Programmer",
+        "years":"May 2013 - February 2015",
+        "description":""
+      }
+    ],
+    "skills":[
+      {
+        "name":"Git",
+        "level":"80%"
+      },
+      {
+        "name":"Selenium",
+        "level":"100%"
+      },
+      {
+        "name":"NodeJS",
+        "level":"70%"
+      },
+      {
+        "name":"Scala",
+        "level":"50%"
+      },
+      {
+        "name":"Golang",
+        "level":"50%"
+      },
+      {
+        "name":"MySQL",
+        "level":"80%"
+      }
+    ]
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"Canadian Wanderlust",
+        "category":"My Travel Blog for my post-university travels",
+        "image":"canadian-wanderlust.jpg",
+        "url":"https://www.canadianwanderlust.com"
+      },
+      {
+        "title":"Fury Fighting Gear",
+        "category":"(offline now) A fighting gear company I started",
+        "image":"fury-fighting-gear.jpg",
+        "url":"http://www.timbakerdev.com"
+      },
+      {
+        "title":"Original Thai Food",
+        "category":"Website I built for a restaurant I like in Thailand",
+        "image":"original-thai-food.jpg",
+        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
+      },
+      {
+        "title":"Resume Website",
+        "category":"A React based resume website template",
+        "image":"resume-website.jpg",
+        "url":"http://www.timbakerdev.com"
+      }
+    ]
+  },
+  "testimonials":{
+    "testimonials":[
+      {
+        "text":"Yeet 1",
+        "user":"Juice WRLD"
+      },
+      {
+        "text":"Yeet 2",
+        "user":"YNW Melly"
+      }
+    ]
+  }
+}
