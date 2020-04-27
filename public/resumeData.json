@@ -64,30 +64,30 @@
         "description":"Focused on BDD test automation with Gherkin on the Core Platform Team.  Maintained a handful of high throughput microservices, handling authentication and location services for the site.  Acted as a skunkworks for new engineering processes or tools to enhance developer productivity."
       },
       {
-        "company":"Pro Unlimited (Roche On-site Contractor)",
+        "company":"Pro Unlimited",
         "title":"Verification Engineer",
         "years":"February 2015 - March 2018",
-        "description":""
+        "description":"Operated as an on-site software verification resource for Roche Diagnostics.  Transitioned from a fully manual verification process to majority automated using Selenium (Java)."
       },
       {
         "company":"The Stevenson Company",
-        "title":"Lead Research Programmer",
+        "title":"Research Programmer",
         "years":"May 2013 - February 2015",
-        "description":""
+        "description":"Performed a variety of tasks including PHPPowerpoint library updates, survey questionnaire programming/hosting, and consumer market segmentation prototypes."
       }
     ],
     "skills":[
       {
-        "name":"Git",
-        "level":"80%"
-      },
-      {
-        "name":"Selenium",
+        "name":"Test Automation",
         "level":"100%"
       },
       {
-        "name":"NodeJS",
-        "level":"70%"
+        "name":"Javascript",
+        "level":"80%"
+      },
+      {
+        "name":"SQL",
+        "level":"80%"
       },
       {
         "name":"Scala",
@@ -98,48 +98,16 @@
         "level":"50%"
       },
       {
-        "name":"MySQL",
-        "level":"80%"
-      }
-    ]
-  },
-  "portfolio":{
-    "projects": [
-      {
-        "title":"Canadian Wanderlust",
-        "category":"My Travel Blog for my post-university travels",
-        "image":"canadian-wanderlust.jpg",
-        "url":"https://www.canadianwanderlust.com"
+        "name":"Java",
+        "level":"50%"
       },
       {
-        "title":"Fury Fighting Gear",
-        "category":"(offline now) A fighting gear company I started",
-        "image":"fury-fighting-gear.jpg",
-        "url":"http://www.timbakerdev.com"
+        "name":"C#",
+        "level":"30%"
       },
       {
-        "title":"Original Thai Food",
-        "category":"Website I built for a restaurant I like in Thailand",
-        "image":"original-thai-food.jpg",
-        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
-      },
-      {
-        "title":"Resume Website",
-        "category":"A React based resume website template",
-        "image":"resume-website.jpg",
-        "url":"http://www.timbakerdev.com"
-      }
-    ]
-  },
-  "testimonials":{
-    "testimonials":[
-      {
-        "text":"Yeet 1",
-        "user":"Juice WRLD"
-      },
-      {
-        "text":"Yeet 2",
-        "user":"YNW Melly"
+        "name":"MongoDB",
+        "level":"20%"
       }
     ]
   }
