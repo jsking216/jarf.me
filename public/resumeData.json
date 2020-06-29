@@ -87,22 +87,18 @@
       },
       {
         "name":"SQL",
-        "level":"80%"
+        "level":"60%"
       },
       {
         "name":"Scala",
-        "level":"50%"
+        "level":"30%"
       },
       {
         "name":"Golang",
-        "level":"50%"
+        "level":"30%"
       },
       {
         "name":"Java",
-        "level":"50%"
-      },
-      {
-        "name":"C#",
         "level":"30%"
       },
       {
