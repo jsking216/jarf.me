@@ -52,9 +52,15 @@
     ],
     "work":[
       {
+        "company":"AngiesList",
+        "title":"Software Engineer",
+        "years":"July 2020 - Present",
+        "description":"Member of Core Platform Team, focusing on the next iteration of our SEO site front-end."
+      },
+      {
         "company":"OneCause",
         "title":"Senior Software Engineer",
-        "years":"October 2019 - Present",
+        "years":"October 2019 - July 2020",
         "description":"Brought on as a member of the Platform Team to aid in CI/CD test automation, help with library updates and dev tooling improvements.  Also served as a temporary member to other engineering teams in Product-oriented roles to help during crunch, which involved creating back-end services with Golang and front-end components with Angular."
       },
       {
