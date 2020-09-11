@@ -12,7 +12,7 @@ jobs:
           awsRegion: $LIGHTHOUSE_CHECK_AWS_REGION
           awsSecretAccessKey: $LIGHTHOUSE_CHECK_AWS_SECRET_ACCESS_KEY
           slackWebhookUrl: $LIGHTHOUSE_CHECK_SLACK_WEBHOOK_URL
-          urls: 'https://jarf.me'
+          urls: 'http://jarf.me'
       - lighthouse-check/validate-status:
           minAccessibilityScore: '50'
           minBestPracticesScore: '50'
