@@ -15,7 +15,6 @@ export async function getStaticProps() {
 }
 
 const Home = (props) => {
-  console.log(`PROPS: ${JSON.stringify(props)}`);
   return(
     <div className="App">
       <Header data={props.resumeData.main}/>
