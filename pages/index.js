@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import About from '../components/About';
 import Contact from '../components/Contact';
 import Resume from '../components/Resume';
+import Head from 'next/head';
 
 export async function getStaticProps() {
   const resumeData = require('../public/resumeData.json');
@@ -17,6 +18,12 @@ export async function getStaticProps() {
 const Home = (props) => {
   return(
     <div className="App">
+      <Head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="theme-color" content="#000000" />
+        <title>Joshua King</title>
+      </Head>
       <Header data={props.resumeData.main}/>
       <About data={props.resumeData.main}/>
       <Resume data={props.resumeData.resume}/>
