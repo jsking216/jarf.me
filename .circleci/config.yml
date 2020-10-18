@@ -17,7 +17,7 @@ jobs:
           minAccessibilityScore: '50'
           minBestPracticesScore: '50'
           minPerformanceScore: '50'
-          minProgressiveWebAppScore: '50'
+          minProgressiveWebAppScore: '10'
           minSeoScore: '50'
 workflows:
   node-tests:
