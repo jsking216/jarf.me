@@ -1,6 +1,3 @@
 User-agent: *
-Allow: /*
 
-Disallow: /api/*
-
-Sitemap: http://www.jarf.me/api/sitemap
+Sitemap: http://www.jarf.me/sitemap.xml
