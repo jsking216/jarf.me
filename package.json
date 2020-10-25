@@ -29,5 +29,8 @@
     "responsive-loader": "^2.2.0",
     "svg-sprite-loader": "^5.0.0",
     "webp-loader": "^0.6.0"
+  },
+  "devDependencies": {
+    "globby": "^11.0.1"
   }
 }
