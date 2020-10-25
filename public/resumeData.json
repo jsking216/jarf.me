@@ -18,9 +18,9 @@
     "resumedownload":"http://www.jarf.me/resume.pdf",
     "social":[
       {
-        "name":"facebook",
-        "url":"http://facebook.com/jarf1337",
-        "className":"fa fa-facebook"
+        "name":"github",
+        "url":"http://github.com/jsking216",
+        "className":"fa fa-github"
       },
       {
         "name":"linkedin",
@@ -28,9 +28,9 @@
         "className":"fa fa-linkedin"
       },
       {
-        "name":"github",
-        "url":"http://github.com/jsking216",
-        "className":"fa fa-github"
+        "name":"facebook",
+        "url":"http://facebook.com/jarf1337",
+        "className":"fa fa-facebook"
       }
     ]
   },
