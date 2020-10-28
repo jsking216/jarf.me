@@ -31,10 +31,5 @@
     "responsive-loader": "^2.2.0",
     "svg-sprite-loader": "^5.0.0",
     "webp-loader": "^0.6.0"
-  },
-  "devDependencies": {
-    "@zeit/next-css": "^1.0.1",
-    "globby": "^11.0.1",
-    "next-purgecss": "^4.0.0"
   }
 }
