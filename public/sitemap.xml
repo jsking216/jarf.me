@@ -3,4 +3,10 @@
   <url>
     <loc>http://www.jarf.me/index.html</loc>
   </url>
+  <url>
+    <loc>http://www.jarf.me/blog/main</loc>
+  </url>
+  <url>
+    <loc>http://www.jarf.me/blog/first</loc>
+  </url>
 </urlset>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Image from 'next/image';
 
 class Contact extends Component {
   render() {
@@ -61,7 +62,7 @@ class Contact extends Component {
                   <div>
                      <button className="submit">Submit</button>
                      <span id="image-loader">
-                        <img alt="" src="images/loader.gif" />
+                        <Image alt="" src="images/loader.gif" />
                      </span>
                   </div>
 					</fieldset>

@@ -25,7 +25,7 @@ export async function getStaticProps(context) {
     encoding: "utf-8",
   });
 
-  const { data, content } = matter(rawContent);
+  const { data } = matter(rawContent);
 
   const result = await unified()
     .use(markdown)
@@ -35,15 +35,14 @@ export async function getStaticProps(context) {
 
   return {
     props: {
-            blog: {
-                ...data,
-          content: result.toString(),
-            }
+      blog: {
+        ...data,
+        content: result.toString(),
+      }
     },
   };
 }
 
-// generate HTML paths at build time
 export async function getStaticPaths(context) {
   const fs = require("fs");
 
