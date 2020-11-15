@@ -7,13 +7,12 @@ function IndexPage(props) {
       <h1>Rambling on tech</h1>
       <ul>
         {props.blogs.map((blog, idx) => {
-          console.log(JSON.stringify(blog));
           return (
             <li key={blog.id}>
               <Link href={`/blog/${blog.slug}`}>
                 <a>{blog.title}</a>
               </Link>
-              <p>{blog.content}</p>
+              <div dangerouslySetInnerHTML={{__html: blog.content }}/>
             </li>
           );
         })}
@@ -36,11 +35,9 @@ export async function getStaticProps() {
       const rawContent = fs.readFileSync(path, {
         encoding: "utf-8",
       });
-      const { data } = matter(rawContent);
+      const { data, content } = matter(rawContent);
 
-      console.log('data: ' + JSON.stringify(data));
-
-      return { ...data, id: uuid() };
+      return { ...data, content, id: uuid() };
     });
 
   return {

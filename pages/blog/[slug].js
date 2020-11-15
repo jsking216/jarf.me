@@ -25,7 +25,7 @@ export async function getStaticProps(context) {
     encoding: "utf-8",
   });
 
-  const { data } = matter(rawContent);
+  const { data, content } = matter(rawContent);
 
   const result = await unified()
     .use(markdown)
