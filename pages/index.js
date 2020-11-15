@@ -20,7 +20,6 @@ const Home = (props) => {
 
   const pageMetas = () => {
   const meta = [
-    { property: 'og:site_name', content: "jarf.me | Joshua King" },
     {
       property: 'og:description',
       content: "jarf.me - Joshua King's personal page",
