@@ -1,6 +1,6 @@
 import React from "react";
 import Helmet from 'react-helmet';
-import { metas, links, htmlAttributes, baseUrl } from '../seo/meta';
+import { metas, links, htmlAttributes, baseUrl } from '../../seo/meta';
 
 function BlogPostPage(props) {
 
