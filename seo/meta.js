@@ -6,30 +6,8 @@ const metas = [
   { 'http-equiv': 'x-ua-compatible', content: 'ie=edge,chrome=1' },
   { 'http-equiv': 'x-dns-prefetch-control', content: 'on' },
   { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
-  { property: 'og:site_name', content: "Jarf.me | Joshua King" },
-  {
-    property: 'og:description',
-    content: "Jarf.me - Joshua King's personal page",
-  },
-  {
-    name: 'description',
-    content: "Jarf.me - Joshua King's personal page",
-  },
-  { property: 'og:type', content: 'profile' },
-  { property: 'og:image', content: `${baseUrl}/images/profilepic.jpg` },
-  { property: 'og:updated_time', content: '2020-10-17T20:20:40-04:00' },
-  { property: 'profile:first_name', content: 'Joshua' },
-  { property: 'profile:last_name', content: 'King' },
-  { property: 'profile:username', content: 'Jarf' },
-  { property: 'profile:username', content: 'Jarf' },
-  {
-    property: 'og:url',
-    content: baseUrl,
-  },
-  { property: 'og:title', content: "Jarf.me | Joshua King" },
-
+  { property: 'og:site_name', content: "jarf.me" },
 ];
-
 
 const htmlAttributes = {
   xmlns: 'http://www.w3.org/1999/xhtml',
@@ -54,11 +32,10 @@ const htmlAttributes = {
 };
 
 const links = [
-  { rel: 'canonical', href: baseUrl },
   { rel: 'dns-prefetch preconnect', href: '//google-analytics.com', crossorigin: 'anonymous' },
   { rel: 'dns-prefetch preconnect', href: '//ajax.googleapis.com', crossorigin: 'anonymous' },
   { rel: 'manifest', href: `${baseUrl}/manifest.json` },
   { rel: 'shortcut icon', type: 'image/png', href: `${baseUrl}/favicon.ico` },
 ];
 
-export { metas, links, htmlAttributes };
+export { metas, links, htmlAttributes, baseUrl };

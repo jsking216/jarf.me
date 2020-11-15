@@ -1,9 +1,48 @@
 import React from "react";
+import Helmet from 'react-helmet';
+import { metas, links, htmlAttributes, baseUrl } from '../seo/meta';
 
 function BlogPostPage(props) {
+
+  const pageTitle = props.blog.title;
+
+  const pageMetas = () => {
+    const meta = [
+      {
+        property: 'og:description',
+        content: `jarf.me | Joshua King's Blog - ${pageTitle}}`,
+      },
+      {
+        name: 'description',
+        content: `jarf.me | Joshua King's Blog - ${pageTitle}`,
+      },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:image', content: `${baseUrl}/images/profilepic.jpg` },
+      {
+        property: 'og:url',
+        content: `${baseUrl}/${props.slug}`,
+      },
+      { property: 'og:title', content: `jarf.me | Joshua King's Blog - ${pageTitle}` },
+    ];
+    meta.concat(metas);
+    return meta;
+  };
+
+  const pageLinks = () => {
+    const link = [{ rel: 'canonical', href: `${baseUrl}/${props.slug}` }];
+    link.concat(links);
+    return link;
+  }
+
   return (
     <div>
-            <h1>{props.blog.title}</h1>
+      <Helmet
+        { ...htmlAttributes }
+        title={`jarf.me | Joshua King's Blog - ${pageTitle}`}
+        meta={pageMetas()}
+        link={pageLinks()}
+      />
+      <h1>{props.blog.title}</h1>
       <section dangerouslySetInnerHTML={{ __html: props.blog.content }}></section>
     </div>
   );
@@ -38,7 +77,8 @@ export async function getStaticProps(context) {
       blog: {
         ...data,
         content: result.toString(),
-      }
+      },
+      slug
     },
   };
 }

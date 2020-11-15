@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import About from '../components/About';
 import Contact from '../components/Contact';
 import Resume from '../components/Resume';
-import { metas, links, htmlAttributes } from '../seo/meta';
+import { metas, links, htmlAttributes, baseUrl } from '../seo/meta';
 import Helmet from 'react-helmet';
 
 export async function getStaticProps() {
@@ -17,13 +17,47 @@ export async function getStaticProps() {
 }
 
 const Home = (props) => {
+
+  const pageMetas = () => {
+  const meta = [
+    { property: 'og:site_name', content: "jarf.me | Joshua King" },
+    {
+      property: 'og:description',
+      content: "jarf.me - Joshua King's personal page",
+    },
+    {
+      name: 'description',
+      content: "jarf.me - Joshua King's personal page",
+    },
+    { property: 'og:type', content: 'profile' },
+    { property: 'og:image', content: `${baseUrl}/images/profilepic.jpg` },
+    { property: 'og:updated_time', content: '2020-10-17T20:20:40-04:00' },
+    { property: 'profile:first_name', content: 'Joshua' },
+    { property: 'profile:last_name', content: 'King' },
+    { property: 'profile:username', content: 'jarf' },
+    {
+      property: 'og:url',
+      content: baseUrl,
+    },
+    { property: 'og:title', content: "Jarf.me | Joshua King" },
+    ];
+    meta.concat(metas);
+    return meta;
+  };
+
+  const pageLinks = () => {
+    const link = [{ rel: 'canonical', href: baseUrl }];
+    link.concat(links);
+    return link;
+  }
+
   return(
     <div className="App">
       <Helmet
         { ...htmlAttributes }
-        title="Jarf.me | Joshua King"
-        meta={metas}
-        link={links}
+        title="jarf.me | Joshua King"
+        meta={pageMetas()}
+        link={pageLinks()}
       />
       <Header data={props.resumeData.main}/>
       <About data={props.resumeData.main}/>
