@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Link from "next/link";
 
 class Header extends Component {
   render() {
@@ -27,6 +28,7 @@ class Header extends Component {
             <li className="navlink"><a className="smoothscroll" href="#about">About</a></li>
 	         <li className="navlink"><a className="smoothscroll" href="#resume">Resume</a></li>
             <li className="navlink"><a className="smoothscroll" href="#contact">Contact</a></li>
+            <li className="navlink"><Link href={`/blog/main`}><a>Blog</a></Link></li>
          </ul>
 
       </nav>
