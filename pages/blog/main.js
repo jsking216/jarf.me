@@ -64,6 +64,10 @@ export async function getStaticProps() {
   const fs = require("fs");
   const matter = require("gray-matter");
   const { v4: uuid } = require("uuid");
+  const html = require("remark-html");
+  const highlight = require("remark-highlight.js");
+  const unified = require("unified");
+  const markdown = require("remark-parse");
 
   const files = fs.readdirSync(`${process.cwd()}/blog-content`, "utf-8");
 
@@ -78,6 +82,20 @@ export async function getStaticProps() {
 
       return { ...data, content, id: uuid() };
     });
+
+  const formattedContent = await Promise.all(
+    blogs.map(async (blog) => {
+      return unified()
+      .use(markdown)
+      .use(highlight)
+      .use(html)
+      .process(blog.content);
+    })
+  );
+
+  for (let i = 0; i < blogs.length; i++) {
+    blogs[i].content = formattedContent[i].toString();
+  }
 
   return {
     props: { blogs },
