@@ -9,4 +9,7 @@
   <url>
     <loc>http://www.jarf.me/blog/first</loc>
   </url>
+  <url>
+    <loc>http://www.jarf.me/blog/static-s3-bucket-site-nextjs-routing</loc>
+  </url>
 </urlset>
