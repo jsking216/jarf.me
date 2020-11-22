@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Helmet from 'react-helmet';
 import { metas, links, htmlAttributes, baseUrl } from '../../seo/meta';
+import Truncate from 'react-truncate-html';
 
 function IndexPage(props) {
 
@@ -50,7 +51,10 @@ function IndexPage(props) {
                 <Link href={`/blog/${blog.slug}`}>
                   <a>{blog.title}</a>
                 </Link>
-                <div dangerouslySetInnerHTML={{__html: blog.content }}/>
+                <Truncate
+                  lines={2}
+                  dangerouslySetInnerHTML={{__html: blog.content }}
+                />
               </li>
             </div>
           );
@@ -64,6 +68,10 @@ export async function getStaticProps() {
   const fs = require("fs");
   const matter = require("gray-matter");
   const { v4: uuid } = require("uuid");
+  const html = require("remark-html");
+  const highlight = require("remark-highlight.js");
+  const unified = require("unified");
+  const markdown = require("remark-parse");
 
   const files = fs.readdirSync(`${process.cwd()}/blog-content`, "utf-8");
 
@@ -78,6 +86,20 @@ export async function getStaticProps() {
 
       return { ...data, content, id: uuid() };
     });
+
+  const formattedContent = await Promise.all(
+    blogs.map(async (blog) => {
+      return unified()
+      .use(markdown)
+      .use(highlight)
+      .use(html)
+      .process(blog.content);
+    })
+  );
+
+  for (let i = 0; i < blogs.length; i++) {
+    blogs[i].content = formattedContent[i].toString();
+  }
 
   return {
     props: { blogs },
