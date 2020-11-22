@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Helmet from 'react-helmet';
 import { metas, links, htmlAttributes, baseUrl } from '../../seo/meta';
+import Truncate from 'react-truncate-html';
 
 function IndexPage(props) {
 
@@ -50,7 +51,10 @@ function IndexPage(props) {
                 <Link href={`/blog/${blog.slug}`}>
                   <a>{blog.title}</a>
                 </Link>
-                <div dangerouslySetInnerHTML={{__html: blog.content }}/>
+                <Truncate
+                  lines={2}
+                  dangerouslySetInnerHTML={{__html: blog.content }}
+                />
               </li>
             </div>
           );
