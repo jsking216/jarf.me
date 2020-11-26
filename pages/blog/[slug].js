@@ -44,6 +44,9 @@ function BlogPostPage(props) {
       />
       <h1>{props.blog.title}</h1>
       <section dangerouslySetInnerHTML={{ __html: props.blog.content }}></section>
+      <Link href={'/blog/main'}>
+        <a>Back to Index</a>
+      </Link>
     </div>
   );
 }
