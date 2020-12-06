@@ -1,5 +1,6 @@
 import React from "react";
 import Helmet from 'react-helmet';
+import Link from "next/link";
 import { metas, links, htmlAttributes, baseUrl } from '../../seo/meta';
 
 function BlogPostPage(props) {
@@ -44,6 +45,9 @@ function BlogPostPage(props) {
       />
       <h1>{props.blog.title}</h1>
       <section dangerouslySetInnerHTML={{ __html: props.blog.content }}></section>
+      <Link href={'/blog/main'}>
+        <a>Back to Index</a>
+      </Link>
     </div>
   );
 }
