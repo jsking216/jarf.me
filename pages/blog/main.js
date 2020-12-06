@@ -37,16 +37,16 @@ function IndexPage(props) {
   return (
     <div>
       <h1>Rambling on tech</h1>
+      <Helmet
+        { ...htmlAttributes }
+        title="jarf.me | Joshua King's Blog"
+        meta={pageMetas()}
+        link={pageLinks()}
+      />
       <ul>
         {props.blogs.map((blog, idx) => {
           return (
             <div>
-              <Helmet
-                { ...htmlAttributes }
-                title="jarf.me | Joshua King's Blog"
-                meta={pageMetas()}
-                link={pageLinks()}
-              />
               <li key={blog.id}>
                 <Link href={`/blog/${blog.slug}`}>
                   <a>{blog.title}</a>
@@ -73,12 +73,15 @@ export async function getStaticProps() {
   const unified = require("unified");
   const markdown = require("remark-parse");
 
-  const files = fs.readdirSync(`${process.cwd()}/blog-content`, "utf-8");
+  const pathPrefix = `${process.cwd()}/blog-content`;
+
+  const files = fs.readdirSync(pathPrefix, "utf-8");
 
   const blogs = files
     .filter((fn) => fn.endsWith(".md"))
+    .sort((a, b) => fs.statSync(`${pathPrefix}/${a}`).birthtimeMs - fs.statSync(`${pathPrefix}/${b}`).birthtimeMs)
     .map((fn) => {
-      const path = `${process.cwd()}/blog-content/${fn}`;
+      const path = `${pathPrefix}/${fn}`;
       const rawContent = fs.readFileSync(path, {
         encoding: "utf-8",
       });
