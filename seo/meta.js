@@ -6,7 +6,7 @@ const metas = [
   { 'http-equiv': 'x-ua-compatible', content: 'ie=edge,chrome=1' },
   { 'http-equiv': 'x-dns-prefetch-control', content: 'on' },
   { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
-  { property: 'og:site_name', content: "jarf.me" },
+  { property: 'og:site_name', content: 'jarf.me' },
 ];
 
 const htmlAttributes = {
@@ -38,4 +38,6 @@ const links = [
   { rel: 'shortcut icon', type: 'image/png', href: `${baseUrl}/favicon.ico` },
 ];
 
-export { metas, links, htmlAttributes, baseUrl };
+export {
+  metas, links, htmlAttributes, baseUrl,
+};

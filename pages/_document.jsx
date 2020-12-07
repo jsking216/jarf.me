@@ -1,6 +1,9 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import React from 'react';
+import Document, {
+  Html, Head, Main, NextScript,
+} from 'next/document';
 
-import { GA_TRACKING_ID } from '../analytics/gtag'
+import { GA_TRACKING_ID } from '../analytics/gtag';
 
 export default class MyDocument extends Document {
   render() {
@@ -12,6 +15,7 @@ export default class MyDocument extends Document {
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
           />
+          {/* eslint-disable react/no-danger */}
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -30,6 +34,6 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }
