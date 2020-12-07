@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import Helmet from 'react-helmet';
 import Truncate from 'react-truncate-html';
-import fs from 'fs';
-import matter from 'gray-matter';
-import { v4 as uuid } from 'uuid';
 import html from 'remark-html';
 import highlight from 'remark-highlight.js';
 import unified from 'unified';
@@ -13,6 +10,7 @@ import markdown from 'remark-parse';
 import {
   metas, links, htmlAttributes, baseUrl,
 } from '../../seo/meta';
+import { getBlogFiles, getBlogContentsFromFilesArray } from '../../util/blog-utils';
 
 function IndexPage(props) {
   const {
@@ -62,7 +60,7 @@ function IndexPage(props) {
           <div>
             <li key={blog.id}>
               <Link href={`/blog/${blog.slug}`}>
-                <a>{blog.title}</a>
+                <a>{`${blog.title} (${blog.date})`}</a>
               </Link>
               <Truncate
                 lines={2}
@@ -77,27 +75,7 @@ function IndexPage(props) {
 }
 
 export async function getStaticProps() {
-  const pathPrefix = `${process.cwd()}/blog-content`;
-
-  const files = fs.readdirSync(pathPrefix, 'utf-8');
-
-  const blogs = files
-    .filter((fn) => fn.endsWith('.md'))
-    .map((fn) => {
-      const path = `${pathPrefix}/${fn}`;
-      const rawContent = fs.readFileSync(path, {
-        encoding: 'utf-8',
-      });
-      const { data, content } = matter(rawContent);
-
-      return { ...data, content, id: uuid() };
-    })
-    .sort((a, b) => {
-      const sortableA = a.date.split('-').reverse().join('');
-      const sortableB = b.date.split('-').reverse().join('');
-      return sortableB - sortableA;
-    });
-
+  const blogs = getBlogContentsFromFilesArray(getBlogFiles());
   const formattedContent = await Promise.all(
     blogs.map(async (blog) => unified()
       .use(markdown)

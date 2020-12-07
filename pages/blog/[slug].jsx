@@ -11,6 +11,7 @@ import markdown from 'remark-parse';
 import {
   metas, links, htmlAttributes, baseUrl,
 } from '../../seo/meta';
+import { getBlogFiles } from '../../util/blog-utils';
 
 function BlogPostPage(props) {
   const {
@@ -24,11 +25,11 @@ function BlogPostPage(props) {
     const meta = [
       {
         property: 'og:description',
-        content: `jarf.me | Joshua King's Blog - ${blog.pageTitle}}`,
+        content: `jarf.me | Joshua King's Blog - ${blog.title}}`,
       },
       {
         name: 'description',
-        content: `jarf.me | Joshua King's Blog - ${blog.pageTitle}`,
+        content: `jarf.me | Joshua King's Blog - ${blog.title}`,
       },
       { property: 'og:type', content: 'website' },
       { property: 'og:image', content: `${baseUrl}/images/profilepic.jpg` },
@@ -36,7 +37,7 @@ function BlogPostPage(props) {
         property: 'og:url',
         content: `${baseUrl}/${slug}`,
       },
-      { property: 'og:title', content: `jarf.me | Joshua King's Blog - ${blog.pageTitle}` },
+      { property: 'og:title', content: `jarf.me | Joshua King's Blog - ${blog.title}` },
     ];
     meta.concat(metas);
     return meta;
@@ -52,11 +53,11 @@ function BlogPostPage(props) {
     <div>
       <Helmet
         html={htmlAttributes}
-        title={`jarf.me | Joshua King's Blog - ${blog.pageTitle}`}
+        title={`jarf.me | Joshua King's Blog - ${blog.title}`}
         meta={pageMetas()}
         link={pageLinks()}
       />
-      <h1>{`${blog.pageTitle}(${blog.date})`}</h1>
+      <h1>{`${blog.title} (${blog.date})`}</h1>
       {/* eslint-disable react/no-danger */}
       <section dangerouslySetInnerHTML={{ __html: blog.content }} />
       <Link href="/blog/main">
@@ -95,9 +96,7 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
-  const path = `${process.cwd()}/blog-content`;
-  const files = fs.readdirSync(path, 'utf-8');
-
+  const files = getBlogFiles();
   const markdownFileNames = files
     .filter((fn) => fn.endsWith('.md'))
     .map((fn) => fn.replace('.md', ''));
