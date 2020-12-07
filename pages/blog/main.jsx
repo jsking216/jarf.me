@@ -10,7 +10,7 @@ import markdown from 'remark-parse';
 import {
   metas, links, htmlAttributes, baseUrl,
 } from '../../seo/meta';
-import { getBlogFiles, getBlogContentsFromFilesArray } from '../../util/blog-utils';
+import { getBlogFiles, getBlogContentsFromFilesArray, getFormattedDate } from '../../util/blog-utils';
 
 function IndexPage(props) {
   const {
@@ -60,7 +60,7 @@ function IndexPage(props) {
           <div>
             <li key={blog.id}>
               <Link href={`/blog/${blog.slug}`}>
-                <a>{`${blog.title} (${blog.date})`}</a>
+                <a>{`${blog.title} (${getFormattedDate(blog.date)})`}</a>
               </Link>
               <Truncate
                 lines={2}

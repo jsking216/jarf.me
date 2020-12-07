@@ -26,4 +26,10 @@ const getBlogContentsFromFilesArray = (filesArray) => {
   return sortedBlogs;
 };
 
-export { getBlogFiles, getBlogContentsFromFilesArray };
+const getFormattedDate = (date) => {
+  const options = { day: 'numeric', month: 'short', year: 'numeric' };
+  const newDate = new Date(date);
+  return newDate.toLocaleDateString('en-US', options);
+};
+
+export { getBlogFiles, getBlogContentsFromFilesArray, getFormattedDate };

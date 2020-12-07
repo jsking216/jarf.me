@@ -11,7 +11,7 @@ import markdown from 'remark-parse';
 import {
   metas, links, htmlAttributes, baseUrl,
 } from '../../seo/meta';
-import { getBlogFiles } from '../../util/blog-utils';
+import { getBlogFiles, getFormattedDate } from '../../util/blog-utils';
 
 function BlogPostPage(props) {
   const {
@@ -57,7 +57,7 @@ function BlogPostPage(props) {
         meta={pageMetas()}
         link={pageLinks()}
       />
-      <h1>{`${blog.title} (${blog.date})`}</h1>
+      <h1>{`${blog.title} (${getFormattedDate(blog.date)})`}</h1>
       {/* eslint-disable react/no-danger */}
       <section dangerouslySetInnerHTML={{ __html: blog.content }} />
       <Link href="/blog/main">
