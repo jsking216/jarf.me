@@ -27,8 +27,11 @@ const getBlogContentsFromFilesArray = (filesArray) => {
 };
 
 const getFormattedDate = (date) => {
+  // assume date is DD-MM-YYYY format, need MM-DD-YYYY to use Date functions
+  const toArray = date.split('-');
+  const fixed = [toArray[1], toArray[0], toArray[2]].join('-');
   const options = { day: 'numeric', month: 'short', year: 'numeric' };
-  const newDate = new Date(date);
+  const newDate = new Date(fixed);
   return newDate.toLocaleDateString('en-US', options);
 };
 
