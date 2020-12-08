@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://www.jarf.me/index.html</loc>
+    <loc>https://www.jarf.me</loc>
   </url>
   <url>
-    <loc>http://www.jarf.me/blog/main</loc>
+    <loc>https://www.jarf.me/blog/main</loc>
   </url>
   <url>
-    <loc>http://www.jarf.me/blog/first</loc>
+    <loc>https://www.jarf.me/blog/first</loc>
   </url>
   <url>
-    <loc>http://www.jarf.me/blog/static-s3-bucket-site-nextjs-routing</loc>
+    <loc>https://www.jarf.me/blog/static-s3-bucket-site-nextjs-routing</loc>
+  </url>
+  <url>
+    <loc>https://www.jarf.me/blog/enabling-https-s3-static-site</loc>
   </url>
 </urlset>
