@@ -4,15 +4,15 @@
     <loc>https://www.jarf.me</loc>
   </url>
   <url>
-    <loc>https://www.jarf.me/blog/main</loc>
+    <loc>https://www.jarf.me/blog/main.html</loc>
   </url>
   <url>
-    <loc>https://www.jarf.me/blog/first</loc>
+    <loc>https://www.jarf.me/blog/first.html</loc>
   </url>
   <url>
-    <loc>https://www.jarf.me/blog/static-s3-bucket-site-nextjs-routing</loc>
+    <loc>https://www.jarf.me/blog/static-s3-bucket-site-nextjs-routing.html</loc>
   </url>
   <url>
-    <loc>https://www.jarf.me/blog/enabling-https-s3-static-site</loc>
+    <loc>https://www.jarf.me/blog/enabling-https-s3-static-site.html</loc>
   </url>
 </urlset>
