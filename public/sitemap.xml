@@ -1,15 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>http://www.jarf.me/index.html</loc>
-  </url>
-  <url>
-    <loc>http://www.jarf.me/blog/main</loc>
-  </url>
-  <url>
-    <loc>http://www.jarf.me/blog/first</loc>
-  </url>
-  <url>
-    <loc>http://www.jarf.me/blog/static-s3-bucket-site-nextjs-routing</loc>
-  </url>
-</urlset>
+      <urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" 
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+      xmlns:xhtml="http://www.w3.org/1999/xhtml">
+      <url><loc>https://jarf.me/404</loc>
+                
+                
+                
+                <lastmod>2020-12-08</lastmod>
+                </url><url><loc>https://jarf.me/api/hello</loc>
+                
+                
+                
+                <lastmod>2020-12-08</lastmod>
+                </url><url><loc>https://jarf.me/blog/[slug]</loc>
+                
+                
+                
+                <lastmod>2020-12-08</lastmod>
+                </url><url><loc>https://jarf.me/blog/enabling-https-s3-static-site</loc>
+                
+                
+                
+                <lastmod>2020-12-08</lastmod>
+                </url><url><loc>https://jarf.me/blog/first</loc>
+                
+                
+                
+                <lastmod>2020-12-08</lastmod>
+                </url><url><loc>https://jarf.me/blog/main</loc>
+                
+                
+                
+                <lastmod>2020-12-08</lastmod>
+                </url><url><loc>https://jarf.me/blog/static-s3-bucket-site-nextjs-routing</loc>
+                
+                
+                
+                <lastmod>2020-12-08</lastmod>
+                </url><url><loc>https://jarf.me/blog/stripping-html-fix-nextjs-s3-routes</loc>
+                
+                
+                
+                <lastmod>2020-12-08</lastmod>
+                </url><url><loc>https://jarf.me</loc>
+                
+                
+                
+                <lastmod>2020-12-08</lastmod>
+                </url></urlset>
