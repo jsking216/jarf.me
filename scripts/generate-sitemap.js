@@ -5,7 +5,7 @@ const root = process.cwd();
 const sitemapFilename = 'sitemap.xml';
 
 // hack because nextjs-sitemap-generator doesn't skip dynamic routes
-fs.unlink(`${root}/.next/server/pages/[slug].js`);
+fs.unlinkSync(`${root}/.next/server/pages/blog/[slug].js`);
 
 sitemap({
   baseUrl: 'https://jarf.me',
