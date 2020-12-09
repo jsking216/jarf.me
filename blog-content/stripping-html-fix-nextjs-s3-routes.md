@@ -9,3 +9,5 @@ The error redirect in S3 + the 404 redirect in cloudfront made every non-root ro
 The solution to the routing problem is to strip the `.html` extension from the statically generated files. I ended up using `glob` to remove the extension from all html files except the root `index.html` file.
 
 I realized that messing with the `sitemap.xml` file on each update would start to get annoying, so I added the `nextjs-sitemap-generator` package and used it to generate a sitemap after each build.
+
+Also ended up refactoring all the components to satisfy whatever eslint rules i have subjected myself to [... all of this and maybe more in the following PR](https://github.com/jsking216/jarf.me/pull/15) 
