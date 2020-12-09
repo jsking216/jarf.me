@@ -1,113 +1,119 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Image from 'next/image';
+import PropTypes from 'prop-types';
 
-class Contact extends Component {
-  render() {
-    if (this.props.data) {
-      var { name } = this.props.data;
-      var { street } = this.props.data.address;
-      var { city } = this.props.data.address;
-      var { state } = this.props.data.address;
-      var { zip } = this.props.data.address;
-      var { phone } = this.props.data;
-      var message = this.props.data.contactmessage;
-    }
+const Contact = (props) => {
+  const {
+    data,
+  } = props;
 
-    return (
-      <section id="contact">
+  return (
+    <section id="contact">
 
-        <div className="row section-head">
+      <div className="row section-head">
 
-          <div className="two columns header-col">
+        <div className="two columns header-col">
 
-            <h1><span>Get In Touch.</span></h1>
-
-          </div>
-
-          <div className="ten columns">
-
-            <p className="lead">{message}</p>
-
-          </div>
+          <h1><span>Get In Touch.</span></h1>
 
         </div>
 
-        <div className="row">
-          <div className="eight columns">
+        <div className="ten columns">
 
-            <form action="" method="post" id="contactForm" name="contactForm">
-              <fieldset>
+          <p className="lead">{data.contactmessage}</p>
 
-                <div>
-                  <label htmlFor="contactName">
-                    Name
-                    <span className="required">*</span>
-                  </label>
-                  <input type="text" defaultValue="" size="35" id="contactName" name="contactName" onChange={this.handleChange} />
-                </div>
+        </div>
 
-                <div>
-                  <label htmlFor="contactEmail">
-                    Email
-                    <span className="required">*</span>
-                  </label>
-                  <input type="text" defaultValue="" size="35" id="contactEmail" name="contactEmail" onChange={this.handleChange} />
-                </div>
+      </div>
 
-                <div>
-                  <label htmlFor="contactSubject">Subject</label>
-                  <input type="text" defaultValue="" size="35" id="contactSubject" name="contactSubject" onChange={this.handleChange} />
-                </div>
+      <div className="row">
+        <div className="eight columns">
 
-                <div>
-                  <label htmlFor="contactMessage">
-                    Message
-                    <span className="required">*</span>
-                  </label>
+          <form action="" method="post" id="contactForm" name="contactForm">
+            <fieldset>
+
+              <div>
+                <label htmlFor="contactName">
+                  Name
+                  <span className="required">*</span>
+                  <input type="text" defaultValue="" size="35" id="contactName" name="contactName" />
+                </label>
+              </div>
+
+              <div>
+                <label htmlFor="contactEmail">
+                  Email
+                  <span className="required">*</span>
+                  <input type="text" defaultValue="" size="35" id="contactEmail" name="contactEmail" />
+                </label>
+              </div>
+
+              <div>
+                <label htmlFor="contactSubject">
+                  Subject
+                  <input type="text" defaultValue="" size="35" id="contactSubject" name="contactSubject" />
+                </label>
+              </div>
+
+              <div>
+                <label htmlFor="contactMessage">
+                  Message
+                  <span className="required">*</span>
                   <textarea cols="50" rows="15" id="contactMessage" name="contactMessage" />
-                </div>
+                </label>
+              </div>
 
-                <div>
-                  <button className="submit">Submit</button>
-                  <span id="image-loader">
-                    <Image alt="" src="/images/loader.gif" layout="fill" />
-                  </span>
-                </div>
-              </fieldset>
-            </form>
+              <div>
+                <button type="submit" className="submit">Submit</button>
+                <span id="image-loader">
+                  <Image alt="" src="/images/loader.gif" layout="fill" />
+                </span>
+              </div>
+            </fieldset>
+          </form>
 
-            <div id="message-warning"> Error boy</div>
-            <div id="message-success">
-              <i className="fa fa-check" />
-              Your message was sent, thank you!
-              <br />
-            </div>
+          <div id="message-warning"> Error boy</div>
+          <div id="message-success">
+            <i className="fa fa-check" />
+            Your message was sent, thank you!
+            <br />
           </div>
-
-          <aside className="four columns footer-widgets">
-            <div className="widget widget_contact">
-
-              <h4>Address and Phone</h4>
-              <p className="address">
-                {name}
-                <br />
-                {street}
-                {' '}
-                <br />
-                {city}
-                ,
-                {state}
-                {' '}
-                {zip}
-                <br />
-                <span>{phone}</span>
-              </p>
-            </div>
-          </aside>
         </div>
-      </section>
-    );
-  }
-}
+
+        <aside className="four columns footer-widgets">
+          <div className="widget widget_contact">
+
+            <h4>Address and Phone</h4>
+            <p className="address">
+              {data.address.name}
+              <br />
+              {data.address.street}
+              {' '}
+              <br />
+              {data.address.city}
+              ,
+              {data.address.state}
+              {' '}
+              {data.address.zip}
+              <br />
+              <span>{data.phone}</span>
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  );
+};
+
+Contact.propTypes = PropTypes.shape({
+  address: PropTypes.shape({
+    city: PropTypes.string.isRequired,
+    state: PropTypes.string.isRequired,
+    street: PropTypes.string.isRequired,
+    zip: PropTypes.string.isRequired,
+  }).isRequired,
+  contactmessage: PropTypes.string.isRequired,
+  phone: PropTypes.string.isRequired,
+}).isRequired;
 
 export default Contact;

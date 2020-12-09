@@ -24,7 +24,7 @@ const MyApp = ({ Component, pageProps }) => {
 };
 
 MyApp.propTypes = {
-  Component: PropTypes.element.isRequired,
+  Component: PropTypes.oneOfType([PropTypes.element, PropTypes.func]).isRequired,
   // eslint-disable-next-line react/forbid-prop-types
   pageProps: PropTypes.object.isRequired,
 };

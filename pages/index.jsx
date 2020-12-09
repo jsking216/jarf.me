@@ -4,7 +4,6 @@ import Helmet from 'react-helmet';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import About from '../components/About';
-import Contact from '../components/Contact';
 import Resume from '../components/Resume';
 import {
   metas, links, htmlAttributes, baseUrl,
@@ -73,7 +72,6 @@ const Home = (props) => {
       <Header data={main} />
       <About data={main} />
       <Resume data={resume} />
-      <Contact data={main} />
       <Footer data={main} />
     </div>
   );
