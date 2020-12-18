@@ -1,0 +1,78 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "getriot",
+      "name": "Daniele Simeone",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/2164596?v=4",
+      "profile": "https://github.com/getriot",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "illiteratewriter",
+      "name": "illiteratewriter",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/5787110?v=4",
+      "profile": "https://github.com/illiteratewriter",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "goran-zdjelar",
+      "name": "Goran Zdjelar",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/45183713?v=4",
+      "profile": "https://github.com/goran-zdjelar",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "jlaramie",
+      "name": "jlaramie",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/755748?v=4",
+      "profile": "https://github.com/jlaramie",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "stewartmcgown",
+      "name": "Stewart McGown",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/1136276?v=4",
+      "profile": "https://ecoeats.uk",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "jordanandree",
+      "name": "Jordan Andree",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/235503?v=4",
+      "profile": "https://jordanandree.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "sakamossan",
+      "name": "sakamossan",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/5309672?v=4",
+      "profile": "https://github.com/sakamossan",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "nextjs-sitemap-generator",
+  "projectOwner": "IlusionDev",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
