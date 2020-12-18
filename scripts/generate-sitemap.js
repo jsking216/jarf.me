@@ -14,8 +14,6 @@ sitemap({
   targetDirectory: `${root}/public`,
   sitemapFilename,
   nextConfigPath: `${root}/next.config.js`,
-  lastmodHashFile: `${root}/lastmod.json`,
-  ignoredPaths: ['']
 });
 
 /* eslint-disable no-console */
