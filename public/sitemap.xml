@@ -4,6 +4,9 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
       xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<<<<<<< HEAD
+      </urlset>
+=======
       <url><loc>https://jarf.me/404</loc>
                 
                 
@@ -50,3 +53,4 @@
                 
                 <lastmod>2020-12-09</lastmod>
                 </url></urlset>
+>>>>>>> master

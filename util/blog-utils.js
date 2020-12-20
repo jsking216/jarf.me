@@ -27,9 +27,9 @@ const getBlogContentsFromFilesArray = (filesArray) => {
 };
 
 const getFormattedDate = (date) => {
-  // assume date is DD-MM-YYYY format, need MM-DD-YYYY to use Date functions
+  // assume date is DD-MM-YYYY format, need YYYY-MM-DD to use Date in Firefox/Safari
   const toArray = date.split('-');
-  const fixed = [toArray[1], toArray[0], toArray[2]].join('-');
+  const fixed = toArray.reverse().join('-');
   const options = { day: 'numeric', month: 'short', year: 'numeric' };
   const newDate = new Date(fixed);
   return newDate.toLocaleDateString('en-US', options);
