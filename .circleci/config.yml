@@ -1,6 +1,5 @@
 version: 2.1
 orbs:
-  node: circleci/node@4.1.0
   lighthouse-check: foo-software/lighthouse-check@0.0.12
 jobs:  
   lighthouse:
@@ -22,5 +21,4 @@ jobs:
 workflows:
   node-tests:
     jobs:
-      - node/test
       - lighthouse
