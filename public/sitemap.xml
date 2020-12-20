@@ -4,4 +4,53 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
       xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<<<<<<< HEAD
       </urlset>
+=======
+      <url><loc>https://jarf.me/404</loc>
+                
+                
+                
+                <lastmod>2020-12-09</lastmod>
+                </url><url><loc>https://jarf.me/api/hello</loc>
+                
+                
+                
+                <lastmod>2020-12-09</lastmod>
+                </url><url><loc>https://jarf.me/blog/enabling-https-s3-static-site</loc>
+                
+                
+                
+                <lastmod>2020-12-09</lastmod>
+                </url><url><loc>https://jarf.me/blog/first</loc>
+                
+                
+                
+                <lastmod>2020-12-09</lastmod>
+                </url><url><loc>https://jarf.me/blog/main</loc>
+                
+                
+                
+                <lastmod>2020-12-09</lastmod>
+                </url><url><loc>https://jarf.me/blog/s3-html-metadata-problem</loc>
+                
+                
+                
+                <lastmod>2020-12-09</lastmod>
+                </url><url><loc>https://jarf.me/blog/static-s3-bucket-site-nextjs-routing</loc>
+                
+                
+                
+                <lastmod>2020-12-09</lastmod>
+                </url><url><loc>https://jarf.me/blog/stripping-html-fix-nextjs-s3-routes</loc>
+                
+                
+                
+                <lastmod>2020-12-09</lastmod>
+                </url><url><loc>https://jarf.me</loc>
+                
+                
+                
+                <lastmod>2020-12-09</lastmod>
+                </url></urlset>
+>>>>>>> master
