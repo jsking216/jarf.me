@@ -32,7 +32,7 @@ function BlogPostPage(props) {
         content: `jarf.me | Joshua King's Blog - ${blog.title}`,
       },
       { property: 'og:type', content: 'website' },
-      { property: 'og:image', content: `${baseUrl}/images/profilepic.jpg` },
+      { property: 'og:image', content: `${baseUrl}/images/profilepic.webp` },
       {
         property: 'og:url',
         content: `${baseUrl}/${slug}`,

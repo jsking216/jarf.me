@@ -29,7 +29,7 @@ function IndexPage(props) {
         content: 'jarf.me | Joshua King\'s Blog - My personal place to talk about tech.',
       },
       { property: 'og:type', content: 'website' },
-      { property: 'og:image', content: `${baseUrl}/images/profilepic.jpg` },
+      { property: 'og:image', content: `${baseUrl}/images/profilepic.webp` },
       {
         property: 'og:url',
         content: `${baseUrl}/blog/main`,
