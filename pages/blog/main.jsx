@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
 import Helmet from 'react-helmet';
-import Truncate from 'react-truncate-html';
 import html from 'remark-html';
 import highlight from 'remark-highlight.js';
 import unified from 'unified';
 import markdown from 'remark-parse';
+import { Col, Container, Row } from 'react-bootstrap';
+import BlogSummary from '../../components/BlogSummary';
 import {
   metas, links, htmlAttributes, baseUrl,
 } from '../../seo/meta';
-import { getBlogFiles, getBlogContentsFromFilesArray, getFormattedDate } from '../../util/blog-utils';
+import { getBlogFiles, getBlogContentsFromFilesArray } from '../../util/blog-utils';
 
 function IndexPage(props) {
   const {
@@ -46,31 +46,26 @@ function IndexPage(props) {
     return link;
   };
 
+  /* MAYBE: consider using the Accordion from React-bootstrap to
+  load all post content instead of truncating and loading a different page
+  */
   return (
-    <div>
-      <h1>Rambling on tech</h1>
+    <Container fluid id="blog">
       <Helmet
         htmlAttributes={htmlAttributes}
         title={'jarf.me | Joshua King\'s Blog'}
         meta={pageMetas()}
         link={pageLinks()}
       />
-      <ul>
-        {blogs.map((blog) => (
-          <div>
-            <li key={blog.id}>
-              <Link href={`/blog/${blog.slug}`}>
-                <a>{`${blog.title} (${getFormattedDate(blog.date)})`}</a>
-              </Link>
-              <Truncate
-                lines={2}
-                dangerouslySetInnerHTML={{ __html: blog.content }}
-              />
-            </li>
-          </div>
-        ))}
-      </ul>
-    </div>
+      <Row><Col><h1>Rambling on tech</h1></Col></Row>
+      {blogs.map((blog) => (
+        <Row>
+          <Col>
+            <BlogSummary blog={blog} />
+          </Col>
+        </Row>
+      ))}
+    </Container>
   );
 }
 
