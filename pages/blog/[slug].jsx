@@ -51,7 +51,7 @@ function BlogPostPage(props) {
   };
 
   return (
-    <Container fluid id="blog">
+    <Container fluid id="page">
       <Helmet
         html={htmlAttributes}
         title={`jarf.me | Joshua King's Blog - ${blog.title}`}

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+import { Col, Row } from 'react-bootstrap';
 import { getFormattedDate } from '../util/blog-utils';
 import Breadcrumb from './Breadcrumb';
 
@@ -20,13 +21,15 @@ const BlogDetails = (props) => {
 
   return (
     <>
-      <h1>{`${blog.title} (${getFormattedDate(blog.date)})`}</h1>
-      <Breadcrumb breadcrumbs={breadcrumbs} />
+      <Row><Col><h1>{`${blog.title} (${getFormattedDate(blog.date)})`}</h1></Col></Row>
+      <Row><Col><Breadcrumb breadcrumbs={breadcrumbs} /></Col></Row>
       {/* eslint-disable react/no-danger */}
-      <section dangerouslySetInnerHTML={{ __html: blog.content }} />
-      <Link href="/blog/main">
-        <a>Back to Index</a>
-      </Link>
+      <Row><Col><section dangerouslySetInnerHTML={{ __html: blog.content }} /></Col></Row>
+      <Row>
+        <Col>
+          <Link href="/blog/main"><a>Back to Index</a></Link>
+        </Col>
+      </Row>
     </>
   );
 };

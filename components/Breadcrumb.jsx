@@ -8,7 +8,7 @@ const Breadcrumb = (props) => {
   return (
     <ul className="breadcrumb">
       {breadcrumbs.map((breadcrumb) => (
-        <li>
+        <li key={breadcrumb.href}>
           {/* eslint-disable-next-line max-len */}
           {(!breadcrumb.isActive) ? <Link href={breadcrumb.href}>{breadcrumb.name}</Link> : (breadcrumb.name) }
         </li>

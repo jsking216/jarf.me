@@ -59,7 +59,7 @@ function IndexPage(props) {
       />
       <Row><Col><h1>Rambling on tech</h1></Col></Row>
       {blogs.map((blog) => (
-        <Row>
+        <Row key={blog.id}>
           <Col>
             <BlogSummary blog={blog} />
           </Col>
