@@ -6,6 +6,8 @@ const About = (props) => {
     data,
   } = props;
 
+  console.log('data', data.resumeDownload);
+
   return (
     <section id="about">
       <div className="row">
