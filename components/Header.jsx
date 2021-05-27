@@ -19,7 +19,6 @@ const Header = (props) => {
         <ul id="nav" className="nav">
           <li className="navlink"><a className="smoothscroll" href="#home">Home</a></li>
           <li className="navlink"><a className="smoothscroll" href="#about">About</a></li>
-          <li className="navlink"><a className="smoothscroll" href="#resume">Resume</a></li>
           <li className="navlink"><Link href="/blog/main"><a>Blog</a></Link></li>
         </ul>
 
