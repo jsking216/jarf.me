@@ -64,6 +64,6 @@ About.propTypes = PropTypes.shape({
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   phone: PropTypes.string.isRequired,
-  resumedownload: PropTypes.string.isRequired,
+  resumeDownload: PropTypes.string.isRequired,
 }).isRequired;
 export default About;
