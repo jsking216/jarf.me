@@ -13,6 +13,7 @@
    e. Call To Action Section
    f. Contact Section
    g. Footer
+   h. Blog
 
 ===================================================================== */
 
@@ -31,7 +32,7 @@ header {
    height: 800px;
    min-height: 500px;
    width: 100%;
-   background: #161415 url(../images/pexels-bri-schneiter-346529-min.jpg) no-repeat top center;
+   background: #161415 url(../images/pexels-bri-schneiter-346529-min.webp) no-repeat top center;
    background-size: cover !important;
 	-webkit-background-size: cover !important;
    text-align: center;
@@ -841,3 +842,51 @@ footer .social-links li:first-child { margin-left: 0; }
  	border-radius: 100%;
 }
 #go-top a:hover { background-color: #0F9095; }
+
+/* ------------------------------------------------------------------ */
+/* h. Blog
+/* ------------------------------------------------------------------ */
+
+#blog {
+   padding-top: 48px;
+   margin-bottom: 48px;
+   color: #000000;
+   font-size: 14px;
+   text-align: start;
+   position: relative;
+}
+
+#blog a, #blog a:visited { color: #1437ff; }
+#blog a:hover, #blog a:focus { color: rgb(151, 0, 0); }
+
+/* Style the list */
+ul.breadcrumb {
+   padding: 10px 16px;
+   list-style: none;
+   background-color: #eee;
+ }
+ 
+ /* Display list items side by side */
+ ul.breadcrumb li {
+   display: inline;
+   font-size: 18px;
+ }
+ 
+ /* Add a slash symbol (/) before/behind each list item */
+ ul.breadcrumb li+li:before {
+   padding: 8px;
+   color: black;
+   content: "/\00a0";
+ }
+ 
+ /* Add a color to all links inside the list */
+ ul.breadcrumb li a {
+   color: #0275d8;
+   text-decoration: none;
+ }
+ 
+ /* Add a color on mouse-over */
+ ul.breadcrumb li a:hover {
+   color: #01447e;
+   text-decoration: underline;
+ }

@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import Link from 'next/link';
 import fs from 'fs';
 import matter from 'gray-matter';
 import html from 'remark-html';
 import highlight from 'remark-highlight.js';
 import unified from 'unified';
 import markdown from 'remark-parse';
+import { Container } from 'react-bootstrap';
 import {
   metas, links, htmlAttributes, baseUrl,
 } from '../../seo/meta';
-import { getBlogFiles, getFormattedDate } from '../../util/blog-utils';
+import { getBlogFiles } from '../../util/blog-utils';
+import BlogDetails from '../../components/BlogDetails';
 
 function BlogPostPage(props) {
   const {
@@ -32,7 +33,7 @@ function BlogPostPage(props) {
         content: `jarf.me | Joshua King's Blog - ${blog.title}`,
       },
       { property: 'og:type', content: 'website' },
-      { property: 'og:image', content: `${baseUrl}/images/profilepic.jpg` },
+      { property: 'og:image', content: `${baseUrl}/images/profilepic.webp` },
       {
         property: 'og:url',
         content: `${baseUrl}/${slug}`,
@@ -50,20 +51,15 @@ function BlogPostPage(props) {
   };
 
   return (
-    <div>
+    <Container fluid id="page">
       <Helmet
         html={htmlAttributes}
         title={`jarf.me | Joshua King's Blog - ${blog.title}`}
         meta={pageMetas()}
         link={pageLinks()}
       />
-      <h1>{`${blog.title} (${getFormattedDate(blog.date)})`}</h1>
-      {/* eslint-disable react/no-danger */}
-      <section dangerouslySetInnerHTML={{ __html: blog.content }} />
-      <Link href="/blog/main">
-        <a>Back to Index</a>
-      </Link>
-    </div>
+      <BlogDetails blog={blog} />
+    </Container>
   );
 }
 

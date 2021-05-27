@@ -31,7 +31,7 @@ const Home = (props) => {
         content: "jarf.me - Joshua King's personal page",
       },
       { property: 'og:type', content: 'profile' },
-      { property: 'og:image', content: `${baseUrl}/images/profilepic.jpg` },
+      { property: 'og:image', content: `${baseUrl}/images/profilepic.webp` },
       { property: 'og:updated_time', content: '2020-10-17T20:20:40-04:00' },
       { property: 'profile:first_name', content: 'Joshua' },
       { property: 'profile:last_name', content: 'King' },
